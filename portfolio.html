@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aarushi| Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #1f2937;
+      --secondary: #6b7280;
+      --accent: #6366f1;
+      --bg: #f8f9fa;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background-color: var(--white);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      z-index: 999;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: var(--accent);
+      left: 0;
+      bottom: -4px;
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    section {
+      max-width: 960px;
+      margin: auto;
+      padding: 5rem 2rem;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.6s ease-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+      color: var(--primary);
+    }
+
+    .intro {
+      text-align: center;
+      padding-top: 3rem;
+    }
+
+    .intro h2 {
+      font-size: 2.4rem;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .intro p {
+      font-size: 1.1rem;
+      color: var(--secondary);
+      margin-top: 0.5rem;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-top: 2rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .skills ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      gap: 12px;
+      margin-top: 1rem;
+    }
+
+    .skills li {
+      background: var(--accent);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.95rem;
+      transition: transform 0.3s ease;
+    }
+
+    .skills li:hover {
+      transform: scale(1.05);
+    }
+
+    .project {
+      margin-top: 1.5rem;
+    }
+
+    .project h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .project p {
+      color: var(--secondary);
+      font-size: 0.95rem;
+    }
+
+    .project a {
+      color: var(--accent);
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+
+    .project a:hover {
+      text-decoration: underline;
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer {
+      background: #f1f1f1;
+      padding: 1.2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--secondary);
+      margin-top: 4rem;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @media(max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>PORTFOLIO</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="intro visible">
+    <h2>Hello, I'm Aarushi 👋</h2>
+    <p> •Frontend Developer  • Clean UI   • Learner</p>
+  </section>
+
+  <section id="about" class="card">
+    <h2>About Me</h2>
+    <p>
+      I’m a web developer who loves design and function equally. My focus is clean code, responsive UI, and a smooth user experience. I’m currently pursuing my degree and constantly upskilling with real-world projects and challenges.
+    </p>
+  </section>
+
+  <section id="skills" class="card skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Java</li>
+      <li>Git & GitHub</li>
+      <li>Figma</li>
+      
+    </ul>
+  </section>
+
+  <section id="projects" class="card">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>🌤️ Weather App</h3>
+      <p>Responsive weather app using OpenWeatherMap API and JS fetch.</p> 
+     <a href="weather.html" target="_blank">View Weather App</a>
+
+    </div>
+
+    <div class="project">
+      <h3>✅ Digital StopWatch </h3>
+      <p>Interactive stopwatch with start, pause, reset, and lap tracking functionality.</p>
+      <a href="stopwatch.html" target="_blank">View StopWatch</a>
+
+    </div>
+
+    <div class="project">
+      <h3>🎮 Tic-Tac-Toe</h3>
+      <p>Responsive Tic-Tac-Toe game using HTML, CSS, JavaScript, and logic.</p>
+     <a href="tic-tac-toe.html" target="_blank">View Tic Tac Toe</a>
+    </div>
+  </section>
+
+<section id="contact" class="card">
+  <h2>Contact Me</h2>
+  <p>Email: <a href="mailto:aarushi.yourmail@gmail.com">aaru767837@@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/aarushi-singh543/" target="_blank">https://www.linkedin.com/in/aarushi-singh543/</a></p>
+  <p>GitHub: <a href="https://github.com/aarushi14246" target="_blank">https://github.com/aarushi14246</a></p>
+</section>
+
+
+  <footer>
+    © 2025 Aarushi Singh All Right Reserve. 
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
+
+
