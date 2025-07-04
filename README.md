@@ -8,20 +8,23 @@ Welcome to my personal portfolio hosted using GitHub Pages!
 
 - Projects Included
 
-- Tic Tac Toe Game 
-  Simple browser-based tic tac toe game.  
-  [Open it](https://aarushi14246.github.io/Portfolio-/tictactoe.html)
+#- Tic Tac Toe Game  
+Simple browser-based tic tac toe game.  
+[Open it](https://aarushi14246.github.io/Portfolio-/tic-tac-toe.html)
 
-- Weather App
-  Shows live weather using OpenWeatherMap API.  
-  [Open it](https://aarushi14246.github.io/Portfolio-/weather.html)
+#- Weather App  
+Shows live weather using OpenWeatherMap API.  
+[Open it](https://aarushi14246.github.io/Portfolio-/weather.html)
+
+#- Stopwatch  
+Simple stopwatch web app.  
+[Open it](https://aarushi14246.github.io/Portfolio-/stopwatch.html)
+
 
 -- How I Built This
 
 - HTML, CSS, JavaScript
 - Hosted with GitHub Pages
 
--- Author
-
+- Author
 Aarushi Singh
-Frontend Developer | Coder | Learner 
